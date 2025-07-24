@@ -9,7 +9,7 @@ const FeatureSection = () => {
             Tame complexity with spec-driven development
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Kiro turns your prompt into clear requirements, system design, and discrete tasks.
+            Mrilo turns your prompt into clear requirements, system design, and discrete tasks.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ const FeatureSection = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Collaborate with Kiro on your spec and architecture.
+              Collaborate with Mrilo on your spec and architecture.
             </h3>
             <p className="text-muted-foreground">
               Work together to define clear requirements and system design before writing code.
@@ -36,7 +36,7 @@ const FeatureSection = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Kiro agents implement the spec while keeping you in control.
+              Mrilo agents implement the spec while keeping you in control.
             </h3>
             <p className="text-muted-foreground">
               AI agents execute your specifications autonomously while maintaining your oversight and approval.

@@ -8,9 +8,9 @@ const Footer = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-primary rounded-md flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">K</span>
+                  <span className="text-primary-foreground font-bold text-lg">M</span>
                 </div>
-                <span className="text-xl font-bold text-foreground">KIRO</span>
+                <span className="text-xl font-bold text-foreground">Mrilo</span>
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-md">
                 The AI IDE for prototype to production. Bringing structure to AI coding with spec-driven development.
@@ -42,7 +42,7 @@ const Footer = () => {
 
           <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 Kiro. All rights reserved.
+              © 2024 Mrilo. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#privacy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Privacy Policy</a>

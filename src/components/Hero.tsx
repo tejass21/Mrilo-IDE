@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/kiro-ide-hero.jpg";
+import heroImage from "/lovable-uploads/5711dad7-d775-4e09-9101-b060f0ccfc95.png";
 
 const Hero = () => {
   return (
@@ -12,7 +12,7 @@ const Hero = () => {
               href="#intro" 
               className="inline-flex items-center space-x-2 bg-secondary/50 border border-border rounded-full px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              <span>Introducing Kiro</span>
+              <span>Introducing Mrilo</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -28,7 +28,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Kiro helps you do your best work by bringing structure to AI coding with spec-driven development.
+              Mrilo helps you do your best work by bringing structure to AI coding with spec-driven development.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ const Hero = () => {
               <div className="bg-card rounded-3xl overflow-hidden">
                 <img 
                   src={heroImage} 
-                  alt="Kiro IDE Interface"
+                  alt="Mrilo IDE Interface"
                   className="w-full h-auto"
                 />
               </div>

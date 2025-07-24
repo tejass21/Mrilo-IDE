@@ -8,9 +8,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">K</span>
+              <span className="text-primary-foreground font-bold text-lg">M</span>
             </div>
-            <span className="text-xl font-bold text-foreground">KIRO</span>
+            <span className="text-xl font-bold text-foreground">Mrilo</span>
             <span className="bg-primary/20 text-primary px-2 py-1 rounded text-xs font-medium">
               PREVIEW
             </span>
