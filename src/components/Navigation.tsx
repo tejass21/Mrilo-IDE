@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Navigation = () => {
+  console.log('Navigation component rendering...');
   const { user, signOut } = useAuth();
+  console.log('Navigation auth state:', { user: !!user });
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">

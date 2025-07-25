@@ -12,35 +12,47 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  console.log('AuthProvider rendering...');
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Set up auth state listener FIRST
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
+    console.log('AuthProvider useEffect starting...');
+    try {
+      // Set up auth state listener FIRST
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(
+        (event, session) => {
+          console.log('Auth state change:', event, !!session);
+          setSession(session);
+          setUser(session?.user ?? null);
+          setLoading(false);
+          
+          // Create profile if user signs up and doesn't have one
+          if (event === 'SIGNED_IN' && session?.user) {
+            setTimeout(() => {
+              createProfileIfNeeded(session.user);
+            }, 0);
+          }
+        }
+      );
+
+      // THEN check for existing session
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        console.log('Initial session check:', !!session);
         setSession(session);
         setUser(session?.user ?? null);
         setLoading(false);
-        
-        // Create profile if user signs up and doesn't have one
-        if (event === 'SIGNED_IN' && session?.user) {
-          setTimeout(() => {
-            createProfileIfNeeded(session.user);
-          }, 0);
-        }
-      }
-    );
+      }).catch((error) => {
+        console.error('Error getting session:', error);
+        setLoading(false);
+      });
 
-    // THEN check for existing session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
+      return () => subscription.unsubscribe();
+    } catch (error) {
+      console.error('Error in AuthProvider useEffect:', error);
       setLoading(false);
-    });
-
-    return () => subscription.unsubscribe();
+    }
   }, []);
 
   const createProfileIfNeeded = async (user: User) => {
@@ -81,6 +93,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  console.log('AuthProvider state:', { user: !!user, session: !!session, loading });
+
+  // Show loading state or children
+  if (loading) {
+    console.log('AuthProvider showing loading...');
+    return (
+      <AuthContext.Provider value={{ user, session, loading, signOut }}>
+        {children}
+      </AuthContext.Provider>
+    );
+  }
+
+  console.log('AuthProvider showing children...');
   return (
     <AuthContext.Provider value={{ user, session, loading, signOut }}>
       {children}
