@@ -74,8 +74,8 @@ const AdditionalFeatures = () => {
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-card/50 border-border p-6 hover:shadow-card transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-primary rounded-xl mb-4 flex items-center justify-center text-primary-foreground">
+              <Card key={index} className="bg-card/50 border-border p-6">
+                <div className="w-12 h-12 bg-primary rounded-xl mb-4 flex items-center justify-center text-primary-foreground">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">

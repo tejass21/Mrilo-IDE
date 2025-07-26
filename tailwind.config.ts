@@ -134,10 +134,10 @@ export default {
 				},
 				'pulse-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(48 100% 67% / 0.3)'
+						boxShadow: '0 0 20px hsl(36 100% 60% / 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(48 100% 67% / 0.6)'
+						boxShadow: '0 0 40px hsl(36 100% 60% / 0.6)'
 					}
 				},
 				'float': {

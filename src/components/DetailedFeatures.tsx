@@ -1,6 +1,7 @@
-import taskListImage from "@/assets/task-list-feature.jpg";
-import codeDiffImage from "@/assets/code-diff-feature.jpg";
-import mcpImage from "@/assets/mcp-feature.jpg";
+import mrilo9 from "@/assets/mrilo9.png";
+import mrilo1 from "@/assets/mrilo1.png";
+import mrilo4 from "@/assets/mrilo4.png";
+import mrilo7 from "@/assets/mrilo7.png";
 
 const DetailedFeatures = () => {
   return (
@@ -25,10 +26,10 @@ const DetailedFeatures = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-gradient-primary p-1 rounded-2xl">
+              <div className="rounded-2xl border border-border shadow-card">
                 <img 
-                  src={taskListImage} 
-                  alt="Mrilo's task list with complete and pending tasks"
+                  src="/assets/1.jpg"
+                  alt="Mrilo Feature 1"
                   className="w-full rounded-2xl"
                 />
               </div>
@@ -46,10 +47,10 @@ const DetailedFeatures = () => {
               </p>
             </div>
             <div className="lg:order-1 relative">
-              <div className="bg-gradient-primary p-1 rounded-2xl">
+              <div className="rounded-2xl border border-border shadow-card">
                 <img 
-                  src="/lovable-uploads/56191b05-2b26-4e62-828e-39ded9874bcf.png" 
-                  alt="Mrilo shows code diff view with chat for building features"
+                  src="/assets/mrilo1.png"
+                  alt="Mrilo Feature 2"
                   className="w-full rounded-2xl"
                 />
               </div>
@@ -67,10 +68,10 @@ const DetailedFeatures = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="bg-gradient-primary p-1 rounded-2xl">
+              <div className="rounded-2xl border border-border shadow-card">
                 <img 
-                  src={codeDiffImage} 
-                  alt="Mrilo reads files and displays tools for exploring code"
+                  src="/assets/mrilo4.png"
+                  alt="Mrilo Feature 3"
                   className="w-full rounded-2xl"
                 />
               </div>
@@ -88,10 +89,10 @@ const DetailedFeatures = () => {
               </p>
             </div>
             <div className="lg:order-1 relative">
-              <div className="bg-gradient-primary p-1 rounded-2xl">
+              <div className="rounded-2xl border border-border shadow-card">
                 <img 
-                  src={mcpImage} 
-                  alt="Mrilo IDE displays MCP server settings with git and fetch commands"
+                  src="/assets/mrilo7.png"
+                  alt="Mrilo Feature 4"
                   className="w-full rounded-2xl"
                 />
               </div>
